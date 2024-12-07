@@ -1,0 +1,21 @@
+{% extends 'base_layout.html' %} {% block content %}
+
+<style></style>
+<h1>List of all the articles</h1>
+
+{% for article in articles %}
+<div class="article">
+  <div class="h2">
+    <!-- <a href=" url 'art_detail' slug=article.slug %}">article.title}}</a> -->
+    <a href="{% url 'article:art_detail' slug=article.slug%}"
+      >{{article.title}}</a
+    >
+  </div>
+  <p>{{article.snippet}}</p>
+  {% if not article.snippet %}
+  <p>No content</p>
+  {% endif%}
+  <p style="color: orange">{{article.date}}</p>
+</div>
+
+{% endfor %} {% endblock %}

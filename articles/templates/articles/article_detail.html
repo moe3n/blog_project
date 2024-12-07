@@ -1,0 +1,17 @@
+{% extends 'base_layout.html' %} {%block content%}
+
+<style>
+  .wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 5vh;
+  }
+</style>
+<div class="wrapper">
+  <div class="h1">{{article.title}}</div>
+  <div class="p">{{article.body}}</div>
+  <div class="p">{{article.date}}</div>
+</div>
+{%endblock%}
